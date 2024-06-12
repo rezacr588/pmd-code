@@ -1,4 +1,3 @@
-```markdown
 # Project Management Dashboard
 
 ## Overview
@@ -28,4 +27,3 @@ The Project Management Dashboard is a comprehensive web application tailored for
 
 ## Conclusion
 Combining the robustness of Java with the agility of Angular, the Project Management Dashboard web app empowers teams to achieve their objectives with heightened productivity and collaboration.
-```
