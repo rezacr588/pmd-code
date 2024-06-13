@@ -10,6 +10,7 @@ import com.pmd.app.model.User;
 import com.pmd.app.service.UserService;
 import com.pmd.app.util.JwtUtil;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import com.pmd.app.service.UserPrincipal;
 
 
 @Service
