@@ -1,0 +1,12 @@
+/workspaces/pmd-code/project_management_dashboard/backend/pmd/src/main/java/com/pmd/app/model/User.java
+/workspaces/pmd-code/project_management_dashboard/backend/pmd/src/main/java/com/pmd/app/controller/UserController.java
+/workspaces/pmd-code/project_management_dashboard/backend/pmd/src/main/java/com/pmd/app/repository/UserRepository.java
+/workspaces/pmd-code/project_management_dashboard/backend/pmd/src/main/java/com/pmd/app/exception/RestResponseEntityExceptionHandler.java
+/workspaces/pmd-code/project_management_dashboard/backend/pmd/src/main/java/com/pmd/app/controller/AuthenticationController.java
+/workspaces/pmd-code/project_management_dashboard/backend/pmd/src/main/java/com/pmd/app/service/UserPrincipal.java
+/workspaces/pmd-code/project_management_dashboard/backend/pmd/src/main/java/com/pmd/app/config/SecurityConfig.java
+/workspaces/pmd-code/project_management_dashboard/backend/pmd/src/main/java/com/pmd/app/service/AuthenticationService.java
+/workspaces/pmd-code/project_management_dashboard/backend/pmd/src/main/java/com/pmd/app/service/UserService.java
+/workspaces/pmd-code/project_management_dashboard/backend/pmd/src/main/java/com/pmd/app/service/UserDetailsService.java
+/workspaces/pmd-code/project_management_dashboard/backend/pmd/src/main/java/com/pmd/app/App.java
+/workspaces/pmd-code/project_management_dashboard/backend/pmd/src/main/java/com/pmd/app/util/JwtUtil.java
