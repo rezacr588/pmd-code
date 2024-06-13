@@ -1,3 +1,5 @@
+package com.pmd.app.model;
+
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -117,4 +119,5 @@ public class User {
         USER,
         ADMIN
     }
+    
 }
