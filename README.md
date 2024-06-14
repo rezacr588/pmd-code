@@ -1,29 +1,41 @@
-# Project Management Dashboard
+# Project Management Dashboard Web App
 
 ## Overview
-The Project Management Dashboard is a comprehensive web application tailored for efficient project management. It leverages Java for the backend and Angular for the frontend, providing a suite of features designed for modern teams.
+The Project Management Dashboard is a powerful web application designed to enhance team productivity and collaboration. By combining the robustness of Java with the agility of Angular, this application provides a comprehensive platform for managing projects, tasks, and teams.
 
-## Backend Features
-- **Spring Boot Framework**: Serves as the backbone for creating standalone, production-grade applications.
-- **RESTful APIs**: Facilitates operations such as user registration and project creation, ensuring scalability and frontend compatibility.
-- **Security with JWT**: Employs JSON Web Tokens to secure user authentication and protect routes.
-- **Database Operations**: Utilizes Hibernate for ORM and Spring Data JPA for streamlined data access.
-- **Real-Time Updates**: Features WebSocket for instant client-server communication.
+## Features
 
-## Frontend Features
-- **Angular Material**: Provides a suite of material design components for a uniform UI.
-- **Angular Services and RxJS**: Manages singleton services and asynchronous code composition.
-- **State Management with NgRx**: Handles state in a predictable way, enhancing debugging and tracking changes.
-- **Navigation with Angular Router**: Manages smooth view transitions based on user interactions.
+1. **User Management**: Register, login, and manage user profiles with ease.
+2. **Project Management**: Create, update, and track projects in real-time.
+3. **Task Management**: Assign tasks, monitor progress, and manage deadlines effectively.
+4. **Team Management**: Build teams, assign roles, and foster collaboration.
+5. **Collaboration Tools**: Share files, comment on tasks, and maintain clear communication within your team.
 
-## Core Functionalities
-- **User Authentication**: Secure system for managing user profiles and authentication. 
-- **Project Dashboard**: Centralized view of all projects with detailed navigation options.
-- **Task Management**: Tools for task creation, assignment, prioritization, and deadline setting.
-- **Interactive Interface**: Drag-and-drop task organization and calendar view for project timelines.
-- **Collaboration Tools**: In-app file sharing and team collaboration features.
-- **Time Tracking**: Task time logs for monitoring individual contributions.
-- **Analytics**: Reports on project progress, team performance, and time management.
+## Pages
 
-## Conclusion
-Combining the robustness of Java with the agility of Angular, the Project Management Dashboard web app empowers teams to achieve their objectives with heightened productivity and collaboration.
+1. **Login/Registration Page**: Secure user registration and login.
+2. **Dashboard Page**: A comprehensive overview of all projects, tasks, and teams.
+3. **Project Page**: Detailed view of individual projects.
+4. **Task Page**: In-depth task tracking and management.
+5. **Team Page**: Manage your teams and their roles.
+6. **User Profile Page**: View and update personal user information.
+
+## APIs
+
+1. **User API**: Handles user registration, login, and management.
+2. **Project API**: Manages all project-related operations.
+3. **Task API**: Takes care of task creation, updates, and management.
+4. **Team API**: Manages team creation, updates, and management.
+5. **Collaboration API**: Handles collaboration features like comments and file sharing.
+
+## Getting Started
+
+To get started with the Project Management Dashboard web app, clone the repository and follow the installation instructions in the INSTALL.md file.
+
+## Contributing
+
+We welcome contributions from the community. Please read our CONTRIBUTING.md file for guidelines on how to contribute to this project.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE.md file for details.
