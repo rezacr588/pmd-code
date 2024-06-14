@@ -1,4 +1,4 @@
-package com.pmd.app.model;
+package com.pmd.app.model.TaskModels;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
