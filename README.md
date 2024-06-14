@@ -17,7 +17,7 @@ The Project Management Dashboard is a comprehensive web application tailored for
 - **Navigation with Angular Router**: Manages smooth view transitions based on user interactions.
 
 ## Core Functionalities
-- **User Authentication**: Secure system for managing user profiles and authentication.
+- **User Authentication**: Secure system for managing user profiles and authentication. 
 - **Project Dashboard**: Centralized view of all projects with detailed navigation options.
 - **Task Management**: Tools for task creation, assignment, prioritization, and deadline setting.
 - **Interactive Interface**: Drag-and-drop task organization and calendar view for project timelines.
