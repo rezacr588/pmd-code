@@ -1,2 +1,3 @@
 com/pmd/app/AppTest.class
 com/pmd/app/model/UserTest.class
+com/pmd/app/model/TaskModels/ProjectTest.class

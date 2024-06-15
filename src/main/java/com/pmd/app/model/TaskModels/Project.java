@@ -1,5 +1,6 @@
 package com.pmd.app.model.TaskModels;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -38,9 +39,11 @@ public class Project {
   public Project(String name, User user) {
     this.name = name;
     this.user = user;
+    this.columns = new ArrayList<>();
   }
 
   public Project() {
+    this.columns = new ArrayList<>();
   }
 
   public Long getId() {
