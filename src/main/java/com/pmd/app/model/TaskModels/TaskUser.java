@@ -15,7 +15,7 @@ import com.pmd.app.model.User;
 public class TaskUser {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
 
   @ManyToOne

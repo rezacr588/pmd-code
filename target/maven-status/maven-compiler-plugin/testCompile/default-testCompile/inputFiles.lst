@@ -5,4 +5,5 @@
 /workspaces/pmd-code/src/test/java/com/pmd/app/AppTest.java
 /workspaces/pmd-code/src/test/java/com/pmd/app/model/TaskModels/ColumnTest.java
 /workspaces/pmd-code/src/test/java/com/pmd/app/model/UserTest.java
+/workspaces/pmd-code/src/test/java/com/pmd/app/repository/TasksRepository/RepositoryTests.java
 /workspaces/pmd-code/src/test/java/com/pmd/app/model/TaskModels/CommentTest.java

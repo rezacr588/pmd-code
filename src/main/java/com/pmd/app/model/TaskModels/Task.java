@@ -16,13 +16,11 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import com.pmd.app.model.TaskModels.Column;
-
 @Entity
 @Table(name = "tasks")
 public class Task {
   @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
 
   @NotNull
