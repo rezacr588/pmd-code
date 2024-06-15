@@ -1,9 +1,22 @@
 package com.pmd.app.model.TaskModels;
 
-import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.util.List;
+
+import com.pmd.app.model.TaskModels.Column;
 
 @Entity
 @Table(name = "tasks")
@@ -25,7 +38,7 @@ public class Task {
   private Column column;
 
   @OneToMany(mappedBy = "task", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-  private List<TaskUser> taskUsers;
+  private List<TaskUser> taskUsers = new ArrayList<>();;
 
   public Task(String name, Integer order, Column column) {
     this.name = name;
