@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.pmd.app.repository.TasksRepository.RepositoryTests" time="4.664" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.pmd.app.util.JwtUtilTest" time="5.359" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -53,12 +53,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testSaveAndGetTask" classname="com.pmd.app.repository.TasksRepository.RepositoryTests" time="0.189"/>
-  <testcase name="testDeleteComment" classname="com.pmd.app.repository.TasksRepository.RepositoryTests" time="0.025"/>
-  <testcase name="testSaveAndGetComment" classname="com.pmd.app.repository.TasksRepository.RepositoryTests" time="0.012"/>
-  <testcase name="testDeleteColumn" classname="com.pmd.app.repository.TasksRepository.RepositoryTests" time="0.016"/>
-  <testcase name="testDeleteTask" classname="com.pmd.app.repository.TasksRepository.RepositoryTests" time="0.011"/>
-  <testcase name="testSaveAndGetColumn" classname="com.pmd.app.repository.TasksRepository.RepositoryTests" time="0.018"/>
-  <testcase name="testDeleteProject" classname="com.pmd.app.repository.TasksRepository.RepositoryTests" time="0.024"/>
-  <testcase name="testSaveAndGetProject" classname="com.pmd.app.repository.TasksRepository.RepositoryTests" time="0.013"/>
+  <testcase name="testExtractUsername" classname="com.pmd.app.util.JwtUtilTest" time="0.103"/>
+  <testcase name="testGenerateToken" classname="com.pmd.app.util.JwtUtilTest" time="0.003"/>
+  <testcase name="testValidateToken" classname="com.pmd.app.util.JwtUtilTest" time="0.004"/>
+  <testcase name="testExtractExpiration" classname="com.pmd.app.util.JwtUtilTest" time="0.003"/>
 </testsuite>

@@ -3,6 +3,7 @@
 /workspaces/pmd-code/src/test/java/com/pmd/app/model/TaskModels/TaskTest.java
 /workspaces/pmd-code/src/test/java/com/pmd/app/repository/UserRepositoryTest.java
 /workspaces/pmd-code/src/test/java/com/pmd/app/AppTest.java
+/workspaces/pmd-code/src/test/java/com/pmd/app/util/JwtUtilTest.java
 /workspaces/pmd-code/src/test/java/com/pmd/app/model/TaskModels/ColumnTest.java
 /workspaces/pmd-code/src/test/java/com/pmd/app/model/UserTest.java
 /workspaces/pmd-code/src/test/java/com/pmd/app/repository/TasksRepository/RepositoryTests.java
