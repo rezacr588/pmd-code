@@ -3,4 +3,5 @@ com/pmd/app/model/UserTest.class
 com/pmd/app/model/TaskModels/ProjectTest.class
 com/pmd/app/model/TaskModels/TaskUserTest.class
 com/pmd/app/model/TaskModels/TaskTest.class
+com/pmd/app/model/TaskModels/CommentTest.class
 com/pmd/app/model/TaskModels/ColumnTest.class

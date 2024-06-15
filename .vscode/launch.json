@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-App<pmd>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.pmd.app.App",
+      "projectName": "pmd",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

@@ -1,1 +1,8 @@
-/workspaces/pmd-code/project_management_dashboard/backend/pmd/src/test/java/com/pmd/app/AppTest.java
+/workspaces/pmd-code/src/test/java/com/pmd/app/model/TaskModels/TaskUserTest.java
+/workspaces/pmd-code/src/test/java/com/pmd/app/model/TaskModels/ProjectTest.java
+/workspaces/pmd-code/src/test/java/com/pmd/app/model/TaskModels/TaskTest.java
+/workspaces/pmd-code/src/test/java/com/pmd/app/repository/UserRepositoryTest.java
+/workspaces/pmd-code/src/test/java/com/pmd/app/AppTest.java
+/workspaces/pmd-code/src/test/java/com/pmd/app/model/TaskModels/ColumnTest.java
+/workspaces/pmd-code/src/test/java/com/pmd/app/model/UserTest.java
+/workspaces/pmd-code/src/test/java/com/pmd/app/model/TaskModels/CommentTest.java
