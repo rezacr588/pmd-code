@@ -15,6 +15,7 @@ public class Role {
   private String name;
 
   public static final Role USER = new Role("USER");
+  public static final Role ADMIN = new Role("ADMIN");
 
   public Role() {
   }

@@ -9,6 +9,7 @@
 /workspaces/pmd-code/src/main/java/com/pmd/app/controller/Task/TaskController.java
 /workspaces/pmd-code/src/main/java/com/pmd/app/controller/Task/ProjectController.java
 /workspaces/pmd-code/src/main/java/com/pmd/app/repository/UserRepository.java
+/workspaces/pmd-code/src/main/java/com/pmd/app/model/Role.java
 /workspaces/pmd-code/src/main/java/com/pmd/app/exception/RestResponseEntityExceptionHandler.java
 /workspaces/pmd-code/src/main/java/com/pmd/app/repository/TasksRepositories/TaskRepository.java
 /workspaces/pmd-code/src/main/java/com/pmd/app/config/SwaggerConfig.java
