@@ -24,8 +24,8 @@ class UserTest {
 
   @Test
   void testToString() {
-    User user = new User(1L, "testUser", "testPassword", "test@example.com", User.Role.ADMIN);
-    String expected = "User{id=1, username='testUser', email='test@example.com', role=ADMIN, createdAt=null, updatedAt=null}";
+    User user = new User(1L, "testUser", "testPassword", "test@example.com", Role.ADMIN);
+    String expected = "User{id=1, username='testUser', email='test@example.com', role=Role{id=null, name='ADMIN'}, createdAt=null, updatedAt=null}";
     assertEquals(expected, user.toString());
   }
 }
