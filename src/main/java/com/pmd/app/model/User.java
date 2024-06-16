@@ -3,11 +3,10 @@ package com.pmd.app.model;
 import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -34,7 +33,7 @@ public class User {
     @Email
     private String email;
 
-    @Enumerated(EnumType.STRING)
+    @ManyToOne
     private Role role;
 
     @CreationTimestamp
@@ -120,10 +119,4 @@ public class User {
                 ", updatedAt=" + updatedAt +
                 '}';
     }
-
-    public enum Role {
-        USER,
-        ADMIN
-    }
-
 }

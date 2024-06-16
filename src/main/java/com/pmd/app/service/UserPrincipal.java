@@ -1,12 +1,13 @@
 package com.pmd.app.service;
 
+import java.util.Collection;
+import java.util.Collections;
+
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import com.pmd.app.model.User;
 
-import java.util.Collection;
-import java.util.Collections;
+import com.pmd.app.model.User;
 
 public class UserPrincipal implements UserDetails {
 
@@ -18,7 +19,7 @@ public class UserPrincipal implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.singleton(new SimpleGrantedAuthority(user.getRole().name()));
+        return Collections.singleton(new SimpleGrantedAuthority(user.getRole().getName()));
     }
 
     @Override
