@@ -3,12 +3,14 @@
 /workspaces/pmd-code/src/main/java/com/pmd/app/model/TaskModels/Comment.java
 /workspaces/pmd-code/src/main/java/com/pmd/app/repository/TasksRepositories/CommentRepository.java
 /workspaces/pmd-code/src/main/java/com/pmd/app/repository/TasksRepositories/ProjectRepository.java
+/workspaces/pmd-code/src/main/java/com/pmd/app/service/TeamServices/TeamService.java
 /workspaces/pmd-code/src/main/java/com/pmd/app/service/TaskServices/CommentService.java
 /workspaces/pmd-code/src/main/java/com/pmd/app/model/TaskModels/Project.java
 /workspaces/pmd-code/src/main/java/com/pmd/app/controller/UserController.java
 /workspaces/pmd-code/src/main/java/com/pmd/app/controller/Task/TaskController.java
 /workspaces/pmd-code/src/main/java/com/pmd/app/controller/Task/ProjectController.java
 /workspaces/pmd-code/src/main/java/com/pmd/app/repository/UserRepository.java
+/workspaces/pmd-code/src/main/java/com/pmd/app/controller/TeamControllers/TeamController.java
 /workspaces/pmd-code/src/main/java/com/pmd/app/repository/TeamRepositories/TeamRepository.java
 /workspaces/pmd-code/src/main/java/com/pmd/app/model/Role.java
 /workspaces/pmd-code/src/main/java/com/pmd/app/exception/RestResponseEntityExceptionHandler.java

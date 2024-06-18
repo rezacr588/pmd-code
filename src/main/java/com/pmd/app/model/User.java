@@ -1,6 +1,7 @@
 package com.pmd.app.model;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -50,6 +51,7 @@ public class User {
     private List<Team> teams;
 
     public User() {
+        this.teams = new ArrayList<>();
     }
 
     public User(String username, String password, String email, Role role) {
@@ -57,6 +59,7 @@ public class User {
         this.password = password;
         this.email = email;
         this.role = role;
+        this.teams = new ArrayList<>();
     }
 
     public User(Long id, String username, String password, String email, Role role) {
@@ -65,6 +68,7 @@ public class User {
         this.password = password;
         this.email = email;
         this.role = role;
+        this.teams = new ArrayList<>();
     }
 
     public Long getId() {

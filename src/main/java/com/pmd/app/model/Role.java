@@ -39,26 +39,4 @@ public class Role {
   public void setName(String name) {
     this.name = name;
   }
-
-  @Override
-  public String toString() {
-    return "Role{" +
-        "id=" + id +
-        ", name='" + name + '\'' +
-        '}';
-  }
-
-  @Override
-  public boolean equals(Object obj) {
-    if (this == obj) {
-      return true;
-    }
-    if (obj == null || getClass() != obj.getClass()) {
-      return false;
-    }
-
-    Role role = (Role) obj;
-
-    return id != null ? id.equals(role.id) : role.id == null;
-  }
 }

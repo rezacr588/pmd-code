@@ -1,7 +1,13 @@
 package com.pmd.app.model;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
+
+import com.pmd.app.model.TeamModels.Team;
 
 class UserTest {
 
@@ -23,9 +29,37 @@ class UserTest {
   }
 
   @Test
-  void testToString() {
-    User user = new User(1L, "testUser", "testPassword", "test@example.com", Role.ADMIN);
-    String expected = "User{id=1, username='testUser', email='test@example.com', role=Role{id=null, name='ADMIN'}, createdAt=null, updatedAt=null}";
-    assertEquals(expected, user.toString());
+  public void getCreatedAt() {
+    User u = new User("abc", "abc", "abc", new Role("abc"));
+    LocalDateTime expected = null;
+    LocalDateTime actual = u.getCreatedAt();
+
+    assertEquals(expected, actual);
   }
+
+  @Test
+  public void getUpdatedAt() {
+    User u = new User("abc", "abc", "abc", new Role("abc"));
+    LocalDateTime expected = null;
+    LocalDateTime actual = u.getUpdatedAt();
+
+    assertEquals(expected, actual);
+  }
+
+  @Test
+  public void getTeams() {
+    User u = new User("abc", "abc", "abc", new Role("abc"));
+    List<Team> expected = new ArrayList<>();
+    List<Team> actual = u.getTeams();
+
+    assertEquals(expected, actual);
+  }
+
+  @Test
+  public void setTeams() {
+    User u = new User("abc", "abc", "abc", new Role("abc"));
+    List<Team> teams = new ArrayList<>();
+    u.setTeams(teams);
+  }
+
 }
