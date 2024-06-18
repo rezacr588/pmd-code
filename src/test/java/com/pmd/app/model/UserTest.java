@@ -62,4 +62,13 @@ class UserTest {
     u.setTeams(teams);
   }
 
+  @Test
+  public void toStringTODO() {
+    User u = new User("abc", "abc", "abc", new Role("abc"));
+    String expected = "User{id=null, username='abc', email='abc', role=Role{id=null, name='abc'}, createdAt=null, updatedAt=null, teams=[]}";
+    String actual = u.toString();
+
+    assertEquals(expected, actual);
+  }
+
 }
