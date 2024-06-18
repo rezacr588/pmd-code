@@ -1,11 +1,13 @@
 package com.pmd.app.model;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
@@ -13,6 +15,8 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+
+import com.pmd.app.model.TeamModels.Team;
 
 @Entity
 public class User {
@@ -41,6 +45,9 @@ public class User {
 
     @UpdateTimestamp
     private LocalDateTime updatedAt;
+
+    @ManyToMany(mappedBy = "members")
+    private List<Team> teams;
 
     public User() {
     }
@@ -108,6 +115,14 @@ public class User {
         return updatedAt;
     }
 
+    public List<Team> getTeams() {
+        return teams;
+    }
+
+    public void setTeams(List<Team> teams) {
+        this.teams = teams;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -119,4 +134,5 @@ public class User {
                 ", updatedAt=" + updatedAt +
                 '}';
     }
+
 }

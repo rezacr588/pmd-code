@@ -69,4 +69,10 @@ public class ColumnControllerTest {
         .accept(MediaType.APPLICATION_JSON))
         .andExpect(status().isOk());
   }
+
+  @Test
+  public void testDeleteColumn() throws Exception {
+    mockMvc.perform(get("/columns/{id}", 1L).accept(MediaType.APPLICATION_JSON))
+        .andExpect(status().isOk());
+  }
 }
