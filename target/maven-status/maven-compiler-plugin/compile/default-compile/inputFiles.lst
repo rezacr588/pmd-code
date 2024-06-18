@@ -27,6 +27,7 @@
 /workspaces/pmd-code/src/main/java/com/pmd/app/model/User.java
 /workspaces/pmd-code/src/main/java/com/pmd/app/service/TaskServices/ProjectService.java
 /workspaces/pmd-code/src/main/java/com/pmd/app/model/TeamModels/Team.java
+/workspaces/pmd-code/src/main/java/com/pmd/app/model/TeamModels/File.java
 /workspaces/pmd-code/src/main/java/com/pmd/app/service/UserPrincipal.java
 /workspaces/pmd-code/src/main/java/com/pmd/app/model/TaskModels/Task.java
 /workspaces/pmd-code/src/main/java/com/pmd/app/controller/Task/CommentController.java
