@@ -1,4 +1,6 @@
+/workspaces/pmd-code/src/test/java/com/pmd/app/service/UserDetailsServiceImplTest.java
 /workspaces/pmd-code/src/test/java/com/pmd/app/model/TaskModels/TaskUserTest.java
+/workspaces/pmd-code/src/test/java/com/pmd/app/service/TaskServices/ProjectServiceTest.java
 /workspaces/pmd-code/src/test/java/com/pmd/app/model/TaskModels/ProjectTest.java
 /workspaces/pmd-code/src/test/java/com/pmd/app/model/TaskModels/TaskTest.java
 /workspaces/pmd-code/src/test/java/com/pmd/app/AppTest.java
@@ -8,6 +10,8 @@
 /workspaces/pmd-code/src/test/java/com/pmd/app/model/TaskModels/CommentTest.java
 /workspaces/pmd-code/src/test/java/com/pmd/app/service/UserPrincipalTest.java
 /workspaces/pmd-code/src/test/java/com/pmd/app/repository/UserRepositoryTest.java
+/workspaces/pmd-code/src/test/java/com/pmd/app/service/TaskServices/ColumnServiceTest.java
 /workspaces/pmd-code/src/test/java/com/pmd/app/util/JwtUtilTest.java
+/workspaces/pmd-code/src/test/java/com/pmd/app/service/TaskServices/TaskServiceTest.java
 /workspaces/pmd-code/src/test/java/com/pmd/app/model/UserTest.java
 /workspaces/pmd-code/src/test/java/com/pmd/app/repository/TasksRepository/RepositoryTests.java
