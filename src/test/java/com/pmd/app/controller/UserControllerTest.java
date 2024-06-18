@@ -58,4 +58,40 @@ public class UserControllerTest {
     assertEquals(200, response.getStatusCodeValue());
     verify(userService, times(1)).deleteUser(user.getId());
   }
+
+  @Test
+  public void testRegisterUser() {
+    User user = new User();
+    user.setUsername("test");
+    user.setEmail("test@test.com");
+    user.setPassword("password");
+    when(userService.registerNewUserAccount(user)).thenReturn(user);
+    ResponseEntity<User> response = userController.registerUser(user);
+    assertEquals(200, response.getStatusCodeValue());
+    assertEquals(user, response.getBody());
+  }
+
+  @Test
+  public void testGetUserByUsername() {
+    User user = new User();
+    user.setUsername("test");
+    user.setEmail("test@test.com");
+    user.setPassword("password");
+    when(userService.findUserByUsername("test")).thenReturn(Optional.of(user));
+    ResponseEntity<User> response = userController.getUserByUsername("test");
+    assertEquals(200, response.getStatusCodeValue());
+    assertEquals(user, response.getBody());
+    verify(userService, times(1)).findUserByUsername("test");
+  }
+
+  @Test
+  public void testGetUserByUsernameNotFound() {
+    when(userService.findUserByUsername("test")).thenReturn(Optional.empty());
+    try {
+      userController.getUserByUsername("test");
+    } catch (RuntimeException e) {
+      assertEquals("User not found with username: test", e.getMessage());
+    }
+  }
+
 }
