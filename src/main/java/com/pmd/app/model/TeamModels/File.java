@@ -76,6 +76,10 @@ public class File {
     this.createdBy = createdBy;
   }
 
+  public void setCreatedBy_Id(Long id) {
+    this.createdBy.setId(id);
+  }
+
   public String getDownloadLink() {
     return downloadLink;
   }
