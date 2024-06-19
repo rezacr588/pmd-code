@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.pmd.app.service.TaskServices.TaskServiceTest
--------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.78 s - in com.pmd.app.service.TaskServices.TaskServiceTest
