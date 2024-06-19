@@ -17,6 +17,13 @@ The Project Management Dashboard is a comprehensive web application designed to 
 
 6. **Chat Groups**: Enables users to create and participate in chat groups for real-time communication. It helps in facilitating discussions, quick decision-making, and enhancing team collaboration.
 
+7. **Real-Time Collaboration**: Supports various features for real-time collaboration, including:
+   - **Live Document Editing**: Multiple users can edit documents simultaneously, with changes reflected in real-time.
+   - **Real-Time Notifications**: Users receive instant notifications for project updates, task changes, and team messages.
+   - **Activity Feeds**: Displays a real-time feed of activities and updates across projects and tasks.
+   - **Presence Indicators**: Shows the online status of team members and their current activity within the application.
+   - **Live Commenting**: Allows users to comment on tasks and documents in real-time, with immediate visibility for the team.
+
 ## APIs
 
 1. **User API**: Handles user registration, login, and profile management operations. It ensures data security and privacy.
@@ -31,68 +38,9 @@ The Project Management Dashboard is a comprehensive web application designed to 
 
 6. **Chat Group API**: Manages the creation and participation in chat groups. It supports real-time messaging and ensures that team communication is efficient and effective.
 
-## LangChain Features
+7. **Real-Time Collaboration API**: Supports various features for real-time collaboration, including live document editing, real-time notifications, activity feeds, presence indicators, and live commenting.
 
-Integrating LangChain into the Project Management Dashboard enhances the application by incorporating advanced natural language processing (NLP) capabilities. Here are some examples of how LangChain can be utilized:
-
-### Enhanced User Management
-
-**Automated Support**:
-- **Example**: Implement a chatbot to handle user queries.
-  - **User Query**: "How do I reset my password?"
-  - **Response**: "To reset your password, click on 'Forgot Password' on the login page and follow the instructions."
-
-**Natural Language Commands**:
-- **Example**: Allow users to update their profiles using natural language.
-  - **User Command**: "Update my profile picture."
-  - **System Action**: LangChain interprets the command and guides the user through the process.
-
-### Project Management Automation
-
-**Project Creation and Updates**:
-- **Example**: Enable users to create projects using natural language.
-  - **User Command**: "Create a new project called 'Website Redesign' with a deadline of July 30."
-  - **System Action**: LangChain parses the command and sets up the project accordingly.
-
-**Progress Reporting**:
-- **Example**: Generate project status reports.
-  - **User Command**: "What's the status of the 'Marketing Campaign' project?"
-  - **System Action**: LangChain summarizes the project progress and provides an update.
-
-### Task Management Enhancements
-
-**Task Assignment via Natural Language**:
-- **Example**: Users can assign tasks using natural language.
-  - **User Command**: "Assign a high-priority task to John to complete the UI design by next Monday."
-  - **System Action**: LangChain interprets the command and assigns the task.
-
-**Deadline Reminders**:
-- **Example**: Send reminders for upcoming deadlines.
-  - **System Notification**: "Reminder: The UI design task assigned to John is due next Monday."
-
-### Team Management and Collaboration
-
-**Team Communication**:
-- **Example**: Facilitate team communication via natural language.
-  - **User Command**: "Send a message to the marketing team to review the new campaign."
-  - **System Action**: LangChain processes the command and sends the message.
-
-**Role Assignments**:
-- **Example**: Manage team roles using natural language.
-  - **User Command**: "Add Sarah to the development team as a front-end developer."
-  - **System Action**: LangChain updates the team roles accordingly.
-
-### Collaboration Tools
-
-**File Sharing via Commands**:
-- **Example**: Simplify file sharing with natural language commands.
-  - **User Command**: "Share the project plan document with the design team."
-  - **System Action**: LangChain facilitates the file sharing.
-
-**Comment Summarization**:
-- **Example**: Summarize lengthy comment threads.
-  - **User Command**: "Summarize the comments on the latest project update."
-  - **System Action**: LangChain provides a summary of key points and action items.
+8. **LangChain API**: Integrates advanced natural language processing (NLP) capabilities into the dashboard. It enables features like automated support, natural language commands for project and task management, enhanced team communication, and summarization of comments and updates.
 
 ## Getting Started
 
