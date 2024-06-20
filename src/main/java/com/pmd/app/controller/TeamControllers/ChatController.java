@@ -38,8 +38,9 @@ public class ChatController {
   @SendTo("/topic/group/{groupId}")
   public ChatMessage addUser(@DestinationVariable Long groupId, @Payload ChatMessage chatMessage,
       SimpMessageHeaderAccessor headerAccessor) {
+
     // Add username in web socket session
-    headerAccessor.getSessionAttributes().put("username", chatMessage.getUser());
+    headerAccessor.getSessionAttributes().put(chatMessage.getUser().getUsername(), chatMessage.getUser());
     // Return the chat message to send it to the client
     return chatMessage;
   }

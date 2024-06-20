@@ -50,6 +50,9 @@ public class User {
     @ManyToMany(mappedBy = "members")
     private List<Team> teams;
 
+    @NotNull
+    private boolean isOnline;
+
     public User() {
         this.teams = new ArrayList<>();
     }
@@ -125,6 +128,14 @@ public class User {
 
     public void setTeams(List<Team> teams) {
         this.teams = teams;
+    }
+
+    public boolean getIsOnline() {
+        return isOnline;
+    }
+
+    public void setIsOnline(boolean isOnline) {
+        this.isOnline = isOnline;
     }
 
     @Override
