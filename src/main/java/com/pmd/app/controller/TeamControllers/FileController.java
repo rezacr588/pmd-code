@@ -59,8 +59,6 @@ public class FileController {
     return ResponseEntity.noContent().build();
   }
 
-  // Custom methods
-
   // Find files by name
   @GetMapping("/name/{name}")
   public ResponseEntity<List<File>> getFilesByName(@PathVariable String name) {

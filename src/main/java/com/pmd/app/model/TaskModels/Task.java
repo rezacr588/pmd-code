@@ -10,11 +10,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.pmd.app.model.TeamModels.ChatGroup;
 
 @Entity
 @Table(name = "tasks")
@@ -31,12 +34,18 @@ public class Task {
   private Integer order;
 
   @NotNull
+  private Boolean status;
+
+  @NotNull
   @ManyToOne
   @JoinColumn(name = "column_id")
   private Column column;
 
   @OneToMany(mappedBy = "task", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
   private List<TaskUser> taskUsers = new ArrayList<>();;
+
+  @ManyToMany(mappedBy = "tasks")
+  private List<ChatGroup> chatGroups;
 
   public Task(String name, Integer order, Column column) {
     this.name = name;
@@ -97,6 +106,40 @@ public class Task {
 
   public void clearTaskUsers() {
     this.taskUsers.clear();
+  }
+
+  public List<ChatGroup> getChatGroups() {
+    return chatGroups;
+  }
+
+  public void setChatGroups(List<ChatGroup> chatGroups) {
+    this.chatGroups = chatGroups;
+  }
+
+  public void addChatGroup(ChatGroup chatGroup) {
+    this.chatGroups.add(chatGroup);
+  }
+
+  public void removeChatGroup(ChatGroup chatGroup) {
+    this.chatGroups.remove(chatGroup);
+  }
+
+  public void clearChatGroups() {
+    this.chatGroups.clear();
+  }
+
+  public Boolean getStatus() {
+    return status;
+  }
+
+  public void setStatus(Boolean status) {
+    this.status = status;
+  }
+
+  @Override
+  public String toString() {
+    return "Task [id=" + id + ", name=" + name + ", order=" + order + ", status=" + status + ", column=" + column
+        + ", taskUsers=" + taskUsers + ", chatGroups=" + chatGroups + "]";
   }
 
 }
