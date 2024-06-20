@@ -1,7 +1,5 @@
 package com.pmd.app.service;
 
-import java.util.Optional;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -50,11 +48,11 @@ public class UserServiceTest {
     User user = new User();
     user.setUsername("username");
 
-    when(userRepository.findByUsername(user.getUsername())).thenReturn(Optional.of(user));
+    when(userRepository.findByUsername(user.getUsername())).thenReturn(user);
 
-    Optional<User> foundUser = userService.findUserByUsername(user.getUsername());
+    User foundUser = userService.findUserByUsername(user.getUsername());
 
-    assertEquals(user.getUsername(), foundUser.get().getUsername());
+    assertEquals(user.getUsername(), foundUser.getUsername());
     verify(userRepository, times(1)).findByUsername(user.getUsername());
   }
 }

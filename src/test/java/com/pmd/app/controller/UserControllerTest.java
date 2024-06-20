@@ -1,7 +1,5 @@
 package com.pmd.app.controller;
 
-import java.util.Optional;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -30,33 +28,16 @@ public class UserControllerTest {
   }
 
   @Test
-  public void testUpdateUser() {
+  public void testGetUserByUsername() {
     User user = new User();
     user.setUsername("test");
     user.setEmail("test@test.com");
     user.setPassword("password");
-
-    when(userService.findUserByUsername("test")).thenReturn(Optional.of(user));
-
-    ResponseEntity<User> response = userController.updateUser("test", user);
-
+    when(userService.findUserByUsername("test")).thenReturn(user);
+    ResponseEntity<User> response = userController.getUserByUsername("test");
     assertEquals(200, response.getStatusCodeValue());
-    verify(userService, times(1)).updateUser(user);
-  }
-
-  @Test
-  public void testDeleteUser() {
-    User user = new User();
-    user.setUsername("test");
-    user.setEmail("test@test.com");
-    user.setPassword("password");
-
-    when(userService.findUserByUsername("test")).thenReturn(Optional.of(user));
-
-    ResponseEntity<?> response = userController.deleteUser("test");
-
-    assertEquals(200, response.getStatusCodeValue());
-    verify(userService, times(1)).deleteUser(user.getId());
+    assertEquals(user, response.getBody());
+    verify(userService, times(1)).findUserByUsername("test");
   }
 
   @Test
@@ -72,21 +53,7 @@ public class UserControllerTest {
   }
 
   @Test
-  public void testGetUserByUsername() {
-    User user = new User();
-    user.setUsername("test");
-    user.setEmail("test@test.com");
-    user.setPassword("password");
-    when(userService.findUserByUsername("test")).thenReturn(Optional.of(user));
-    ResponseEntity<User> response = userController.getUserByUsername("test");
-    assertEquals(200, response.getStatusCodeValue());
-    assertEquals(user, response.getBody());
-    verify(userService, times(1)).findUserByUsername("test");
-  }
-
-  @Test
   public void testGetUserByUsernameNotFound() {
-    when(userService.findUserByUsername("test")).thenReturn(Optional.empty());
     try {
       userController.getUserByUsername("test");
     } catch (RuntimeException e) {

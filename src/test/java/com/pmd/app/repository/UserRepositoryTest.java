@@ -1,7 +1,5 @@
 package com.pmd.app.repository;
 
-import java.util.Optional;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,10 +26,9 @@ public class UserRepositoryTest {
     entityManager.flush();
 
     // when
-    Optional<User> found = userRepository.findByUsername(user.getUsername());
+    User found = userRepository.findByUsername(user.getUsername());
 
     // then
-    assertThat(found.isPresent()).isTrue();
-    assertThat(found.get().getUsername()).isEqualTo(user.getUsername());
+    assertThat(found.getUsername()).isEqualTo(user.getUsername());
   }
 }
