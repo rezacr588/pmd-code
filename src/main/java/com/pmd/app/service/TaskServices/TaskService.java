@@ -1,17 +1,23 @@
 package com.pmd.app.service.TaskServices;
 
-import org.springframework.stereotype.Service;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.pmd.app.model.TaskModels.Task;
 import com.pmd.app.model.TeamModels.ChatGroup;
 import com.pmd.app.repository.TasksRepositories.TaskRepository;
-import java.util.List;
-import java.util.Optional;
+import com.pmd.app.repository.TeamRepositories.ChatGroupRepository;
 
 @Service
 public class TaskService {
 
     private final TaskRepository taskRepository;
+
+    @Autowired
+    private ChatGroupRepository chatGroupRepository;
 
     @Autowired
     public TaskService(TaskRepository taskRepository) {
@@ -43,9 +49,12 @@ public class TaskService {
         task.setStatus(true); // Assuming true means the task is closed
         taskRepository.save(task);
 
-        // Close the associated chat groups
+        // Check if all tasks in each associated chat group are closed
         for (ChatGroup chatGroup : task.getChatGroups()) {
-            closeChatGroup(chatGroup);
+            boolean allTasksClosed = chatGroup.getTasks().stream().allMatch(Task::getStatus);
+            if (allTasksClosed) {
+                closeChatGroup(chatGroup);
+            }
         }
 
         return task;

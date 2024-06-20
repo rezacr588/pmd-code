@@ -41,4 +41,12 @@ public class ChatGroupService {
     chatGroup.getUsers().remove(user);
     return chatGroupRepository.save(chatGroup);
   }
+
+  public void closeChatGroup(Long chatGroupId) {
+    ChatGroup chatGroup = chatGroupRepository.findById(chatGroupId)
+        .orElseThrow(() -> new RuntimeException("Chat group not found"));
+    chatGroup.setStatus(true); // Assuming true means the chat group is closed
+    chatGroupRepository.save(chatGroup);
+  }
+
 }

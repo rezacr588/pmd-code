@@ -67,4 +67,9 @@ public class ChatController {
   public ChatGroup removeUserFromGroup(@Payload ChatGroup chatGroup, @Payload User chatUser) {
     return chatGroupService.removeUserFromGroup(chatGroup, chatUser);
   }
+
+  @MessageMapping("/chat.closeGroup/{groupId}")
+  public void closeChatGroup(@DestinationVariable Long groupId) {
+    chatGroupService.closeChatGroup(groupId);
+  }
 }
