@@ -87,11 +87,4 @@ public class File {
   public void setDownloadLink(String downloadLink) {
     this.downloadLink = downloadLink;
   }
-
-  @Override
-  public String toString() {
-    return "File [createdBy=" + createdBy + ", data=" + data + ", downloadLink=" + downloadLink + ", id=" + id
-        + ", name=" + name + ", team=" + team + ", type=" + type + "]";
-  }
-
 }

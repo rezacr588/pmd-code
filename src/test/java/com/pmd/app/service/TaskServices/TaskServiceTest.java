@@ -116,12 +116,12 @@ class TaskServiceTest {
 
     ChatGroup chatGroup = new ChatGroup();
     chatGroup.setId(1L);
-    chatGroup.setStatus(false);
+    chatGroup.setStatus(true);
     chatGroup.setTasks(new ArrayList<>());
 
     Task openTask = new Task();
     openTask.setId(2L);
-    openTask.setStatus(false);
+    openTask.setStatus(true);
 
     // Add the chat group to the task
     task.getChatGroups().add(chatGroup);
@@ -135,8 +135,8 @@ class TaskServiceTest {
 
     Task closedTask = taskService.closeTask(1L);
 
-    assertTrue(closedTask.getStatus());
-    assertFalse(chatGroup.getStatus());
+    assertFalse(closedTask.getStatus());
+    assertTrue(chatGroup.getStatus());
     verify(taskRepository).save(task);
     verify(chatGroupRepository, never()).save(any(ChatGroup.class));
   }

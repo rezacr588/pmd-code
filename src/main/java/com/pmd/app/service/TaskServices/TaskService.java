@@ -46,7 +46,7 @@ public class TaskService {
 
     public Task closeTask(Long taskId) {
         Task task = taskRepository.findById(taskId).orElseThrow(() -> new RuntimeException("Task not found"));
-        task.setStatus(true); // Assuming true means the task is closed
+        task.setStatus(false);
         taskRepository.save(task);
 
         // Check if all tasks in each associated chat group are closed
@@ -61,7 +61,7 @@ public class TaskService {
     }
 
     private void closeChatGroup(ChatGroup chatGroup) {
-        chatGroup.setStatus(true); // Assuming true means the chat group is closed
+        chatGroup.setStatus(false);
         chatGroupRepository.save(chatGroup);
     }
 }
