@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
@@ -14,6 +15,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 import com.pmd.app.model.TeamModels.ChatGroup;
+import com.pmd.app.model.User;
 import com.pmd.app.repository.TeamRepositories.ChatGroupRepository;
 
 @SpringBootTest
@@ -66,5 +68,33 @@ public class ChatGroupServiceTest {
 		chatGroupService.deleteChatGroup(1L);
 
 		verify(chatGroupRepository, times(1)).deleteById(1L);
+	}
+
+	@Test
+	public void testRemoveUserFromGroup() {
+		ChatGroup chatGroup = new ChatGroup();
+		User user = new User();
+		chatGroup.addUser(user);
+
+		when(chatGroupRepository.findById(1L)).thenReturn(java.util.Optional.of(chatGroup));
+
+		chatGroupService.removeUserFromGroup(chatGroup, user);
+
+		assertFalse(chatGroup.getUsers().contains(user));
+		verify(chatGroupRepository, times(1)).save(chatGroup);
+	}
+
+	@Test
+	public void testCloseChatGroup() {
+		ChatGroup chatGroup = new ChatGroup();
+		chatGroup.setStatus(true);
+
+		when(chatGroupRepository.findById(1L)).thenReturn(java.util.Optional.of(chatGroup));
+
+		chatGroupService.closeChatGroup(1L);
+		chatGroup.setStatus(false);
+
+		assertFalse(chatGroup.getStatus());
+		verify(chatGroupRepository, times(1)).save(chatGroup);
 	}
 }
