@@ -102,11 +102,4 @@ public class ChatGroup {
   public void removeMessage(ChatMessage message) {
     this.messages.remove(message);
   }
-
-  @Override
-  public String toString() {
-    return "ChatGroup [id=" + id + ", name=" + name + ", messages=" + messages + ", users=" + users + ", task=" + task
-        + ", status=" + status + "]";
-  }
-
 }
