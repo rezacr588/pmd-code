@@ -57,6 +57,12 @@ public class Team {
     this.members = new ArrayList<>();
   }
 
+  public Team(String name, List<User> members, User member) {
+    this.name = name;
+    this.members = members != null ? members : new ArrayList<>();
+    this.members.add(member);
+  }
+
   public Team(String name, User member) {
     this.name = name;
     this.members = new ArrayList<>();
