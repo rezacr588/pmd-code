@@ -10,8 +10,6 @@ import com.pmd.app.model.TeamModels.File;
 @Repository
 public interface FileRepository extends JpaRepository<File, Long> {
 
-  // Custom methods
-
   // Find files by name
   List<File> findByName(String name);
 
