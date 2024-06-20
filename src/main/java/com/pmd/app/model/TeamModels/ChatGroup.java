@@ -1,5 +1,6 @@
 package com.pmd.app.model.TeamModels;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -24,15 +25,15 @@ public class ChatGroup {
   private String name;
 
   @OneToMany(mappedBy = "chatGroup")
-  private List<ChatMessage> messages;
+  private List<ChatMessage> messages = new ArrayList<>();
 
   @ManyToMany
   @JoinTable(name = "chatgroup_user", joinColumns = @JoinColumn(name = "chatgroup_id"), inverseJoinColumns = @JoinColumn(name = "user_id"))
-  private List<User> users;
+  private List<User> users = new ArrayList<>();
 
   @ManyToMany
   @JoinTable(name = "chatgroup_task", joinColumns = @JoinColumn(name = "chatgroup_id"), inverseJoinColumns = @JoinColumn(name = "task_id"))
-  private List<Task> tasks;
+  private List<Task> tasks = new ArrayList<>();
 
   @NotNull
   private Boolean status;

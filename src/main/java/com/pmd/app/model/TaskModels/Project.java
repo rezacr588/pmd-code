@@ -100,41 +100,4 @@ public class Project {
     this.user = project.getUser();
     this.columns = project.getColumns();
   }
-
-  @Override
-  public String toString() {
-    return "Project{" +
-        "id=" + id +
-        ", name='" + name + '\'' +
-        ", user=" + user +
-        ", columns=" + columns +
-        '}';
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o)
-      return true;
-    if (o == null || getClass() != o.getClass())
-      return false;
-
-    Project project = (Project) o;
-
-    if (!id.equals(project.id))
-      return false;
-    if (!name.equals(project.name))
-      return false;
-    if (!user.equals(project.user))
-      return false;
-    return columns.equals(project.columns);
-  }
-
-  @Override
-  public int hashCode() {
-    int result = id.hashCode();
-    result = 31 * result + name.hashCode();
-    result = 31 * result + user.hashCode();
-    result = 31 * result + columns.hashCode();
-    return result;
-  }
 }

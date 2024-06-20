@@ -47,12 +47,6 @@ public class Task {
   @ManyToMany(mappedBy = "tasks")
   private List<ChatGroup> chatGroups;
 
-  public Task(String name, Integer order, Column column) {
-    this.name = name;
-    this.order = order;
-    this.column = column;
-  }
-
   public Task() {
   }
 
@@ -134,12 +128,6 @@ public class Task {
 
   public void setStatus(Boolean status) {
     this.status = status;
-  }
-
-  @Override
-  public String toString() {
-    return "Task [id=" + id + ", name=" + name + ", order=" + order + ", status=" + status + ", column=" + column
-        + ", taskUsers=" + taskUsers + ", chatGroups=" + chatGroups + "]";
   }
 
 }

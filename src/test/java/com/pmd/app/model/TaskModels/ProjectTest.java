@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
+import com.pmd.app.model.Role;
 import com.pmd.app.model.User;
 
 public class ProjectTest {
@@ -40,5 +41,41 @@ public class ProjectTest {
     assertEquals("Project 2", project1.getName());
     assertEquals(project2.getUser(), project1.getUser());
     assertEquals(columns, project1.getColumns());
+  }
+
+  @Test
+  public void updateColumns() {
+    Project p = new Project("abc", new User("abc", "abc", "abc", new Role("abc")));
+    List<Column> columns = new ArrayList<>();
+    p.updateColumns(columns);
+  }
+
+  @Test
+  public void clearColumns() {
+    Project p = new Project("abc", new User("abc", "abc", "abc", new Role("abc")));
+    p.clearColumns();
+  }
+
+  @Test
+  public void setUser() {
+    Project p = new Project("abc", new User("abc", "abc", "abc", new Role("abc")));
+    User user = new User("abc", "abc", "abc", new Role("abc"));
+    p.setUser(user);
+  }
+
+  @Test
+  public void setId() {
+    Project p = new Project("abc", new User("abc", "abc", "abc", new Role("abc")));
+    Long id = 123L;
+    p.setId(id);
+  }
+
+  @Test
+  public void getId() {
+    Project p = new Project("abc", new User("abc", "abc", "abc", new Role("abc")));
+    Long id = 123L;
+    p.setId(id);
+    assertEquals(id, p.getId());
+
   }
 }
