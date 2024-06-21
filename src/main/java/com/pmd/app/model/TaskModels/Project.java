@@ -15,6 +15,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+import com.pmd.app.model.TeamModels.Team;
 import com.pmd.app.model.User;
 
 @Entity
@@ -35,6 +36,10 @@ public class Project {
 
   @OneToMany(mappedBy = "project", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
   private List<Column> columns;
+
+  @ManyToOne
+  @JoinColumn(name = "team_id")
+  private Team team;
 
   public Project(String name, User user) {
     this.name = name;
@@ -99,5 +104,13 @@ public class Project {
     this.name = project.getName();
     this.user = project.getUser();
     this.columns = project.getColumns();
+  }
+
+  public Team getTeam() {
+    return team;
+  }
+
+  public void setTeam(Team team) {
+    this.team = team;
   }
 }

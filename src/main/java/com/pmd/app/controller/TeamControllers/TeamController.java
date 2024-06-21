@@ -1,6 +1,7 @@
 package com.pmd.app.controller.TeamControllers;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.pmd.app.model.TeamModels.Team;
+import com.pmd.app.model.User;
+import com.pmd.app.service.TeamServices.NotificationService;
 import com.pmd.app.service.TeamServices.TeamService;
 
 @RestController
@@ -21,10 +24,12 @@ import com.pmd.app.service.TeamServices.TeamService;
 public class TeamController {
 
   private final TeamService teamService;
+  private final NotificationService notificationService;
 
   @Autowired
-  public TeamController(TeamService teamService) {
+  public TeamController(TeamService teamService, NotificationService notificationService) {
     this.teamService = teamService;
+    this.notificationService = notificationService;
   }
 
   @GetMapping
@@ -60,6 +65,36 @@ public class TeamController {
       teamService.deleteTeam(id);
       return ResponseEntity.ok().build();
     } else {
+      return ResponseEntity.notFound().build();
+    }
+  }
+
+  @PostMapping("/{teamId}/join")
+  public ResponseEntity<Void> joinTeam(@PathVariable Long teamId, @RequestBody User user) {
+    // Logic to add the user to the team...
+    // After the user has been added to the team, send the notification:
+    Optional<Team> optionalTeam = teamService.getTeamById(teamId);
+    if (optionalTeam.isPresent()) {
+      Team team = optionalTeam.get();
+      notificationService.sendTeamJoinNotification(team, user);
+      return ResponseEntity.ok().build();
+    } else {
+      // Handle the case where the team is not found
+      return ResponseEntity.notFound().build();
+    }
+  }
+
+  @PostMapping("/{teamId}/leave")
+  public ResponseEntity<Void> leaveTeam(@PathVariable Long teamId, @RequestBody User user) {
+    // Logic to remove the user from the team...
+    // After the user has been removed from the team, send the notification:
+    Optional<Team> optionalTeam = teamService.getTeamById(teamId);
+    if (optionalTeam.isPresent()) {
+      Team team = optionalTeam.get();
+      notificationService.sendUserLeaveNotification(team, user);
+      return ResponseEntity.ok().build();
+    } else {
+      // Handle the case where the team is not found
       return ResponseEntity.notFound().build();
     }
   }
