@@ -30,7 +30,6 @@ public class Notification {
 
   private LocalDateTime timestamp;
 
-  // Constructors, getters and setters...
   public Notification() {
   }
 

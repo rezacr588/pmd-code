@@ -1,6 +1,7 @@
 package com.pmd.app.service.TeamServices;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
@@ -14,10 +15,13 @@ public class NotificationService {
 
   private final SimpMessagingTemplate template;
   private final JsonService jsonService;
+  private final NotificationRepository notificationRepository;
 
-  public NotificationService(SimpMessagingTemplate template, JsonService jsonService) {
+  public NotificationService(SimpMessagingTemplate template, JsonService jsonService,
+      NotificationRepository notificationRepository) {
     this.template = template;
     this.jsonService = jsonService;
+    this.notificationRepository = notificationRepository;
   }
 
   public void sendTeamJoinNotification(Team team, User newMember) {
@@ -48,5 +52,11 @@ public class NotificationService {
         template.convertAndSend("/topic/team/" + team.getId(), notificationJson);
       }
     }
+  }
+
+  public List<Notification> getMissedNotificationsForUser(Long userId) {
+    // Implement the logic to fetch missed notifications for a user.
+    // This will likely involve calling a method on the NotificationRepository.
+    return notificationRepository.findByReceiverId(userId);
   }
 }
