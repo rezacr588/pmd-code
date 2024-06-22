@@ -3,7 +3,7 @@
 
 ## Overview
 
-The Project Management Dashboard is a comprehensive web application designed to streamline team productivity and collaboration. This application leverages the power of Java for backend operations and offers a unified platform for managing projects, tasks, and teams in real-time.
+The Project Management Dashboard is a comprehensive web application designed to streamline team productivity and collaboration. This application leverages the power of Java for backend operations and offers a unified platform for managing projects, tasks, and teams in real-time. The architecture follows a microservices approach, ensuring scalability, maintainability, and flexibility.
 
 ## Features
 
@@ -138,16 +138,192 @@ The Project Management Dashboard is a comprehensive web application designed to 
 - Predictive analytics for project timelines and risk assessment
 - Chatbot interface for quick information retrieval and simple actions
 
-## APIs
+## Microservices Architecture
 
-1. **User API**: Handles user registration, login, and profile management operations.
-2. **Project API**: Manages all project-related operations, including creation, updates, and tracking.
-3. **Task API**: Takes care of task creation, updates, and management.
-4. **Team API**: Manages team creation, role assignment, and team communication.
-5. **Collaboration API**: Handles collaboration features like comments and file sharing.
-6. **Chat Group API**: Manages the creation and participation in chat groups.
-7. **Real-Time Collaboration API**: Supports various features for real-time collaboration.
-8. **LangChain API**: Integrates advanced natural language processing (NLP) capabilities.
+The Project Management Dashboard is implemented using a microservices architecture. Each microservice is responsible for a specific aspect of the application, allowing for independent development, deployment, and scaling. Here is a breakdown of the microservices and their responsibilities:
+
+### User Service
+
+**Responsibilities:**
+
+- User registration, login, and profile management
+- Authentication and authorization
+- Role-based access control
+
+**Key Models:**
+
+- User
+- Role
+- Permission
+
+### Project Service
+
+**Responsibilities:**
+
+- Project creation and management
+- Milestone tracking
+- Gantt chart visualization
+- Resource allocation
+- Budget tracking
+
+**Key Models:**
+
+- Project
+- Milestone
+- Budget
+
+### Task Service
+
+**Responsibilities:**
+
+- Task creation, assignment, and prioritization
+- Subtask management
+- Kanban board
+- Time tracking and estimation
+- Dependency management
+
+**Key Models:**
+
+- Task
+- Subtask
+- TaskDependency
+
+### Team Service
+
+**Responsibilities:**
+
+- Team creation and management
+- Role and skill management
+- Capacity planning
+- Performance tracking
+
+**Key Models:**
+
+- Team
+- Member
+- Skill
+
+### Collaboration Service
+
+**Responsibilities:**
+
+- Document version control
+- Shared calendars and event scheduling
+- Wiki-style knowledge base
+- Integration with collaboration tools
+
+**Key Models:**
+
+- Document
+- CalendarEvent
+- WikiPage
+
+### Chat Service
+
+**Responsibilities:**
+
+- Chat group management
+- Direct messaging
+- File sharing
+- Message threading
+
+**Key Models:**
+
+- ChatGroup
+- Message
+
+### Real-Time Collaboration Service
+
+**Responsibilities:**
+
+- Live document editing
+- Real-time notifications
+- Activity feeds
+- Presence indicators
+- Live commenting
+
+**Key Models:**
+
+- LiveDocument
+- Notification
+- Activity
+
+### Reporting Service
+
+**Responsibilities:**
+
+- Customizable dashboards
+- Real-time project health indicators
+- Various reports for project and resource tracking
+
+**Key Models:**
+
+- Dashboard
+- Report
+
+### Integration Service
+
+**Responsibilities:**
+
+- Third-party tool integrations
+- API interactions
+- Webhooks
+
+**Key Models:**
+
+- APIIntegration
+- Webhook
+
+### Mobile Service
+
+**Responsibilities:**
+
+- Mobile-specific features
+- Offline mode
+- Push notifications
+
+**Key Models:**
+
+- MobileNotification
+
+### Security Service
+
+**Responsibilities:**
+
+- Data encryption
+- Security audits
+- Compliance and disaster recovery
+
+**Key Models:**
+
+- SecurityLog
+- ComplianceRecord
+
+### Customization Service
+
+**Responsibilities:**
+
+- Custom fields management
+- Workflow customization
+- Plugin architecture
+
+**Key Models:**
+
+- CustomField
+- Plugin
+
+### AI Service
+
+**Responsibilities:**
+
+- Natural language processing
+- Task prioritization and resource allocation
+- Predictive analytics
+
+**Key Models:**
+
+- NLPModel
+- Prediction
 
 ## Getting Started
 
@@ -160,3 +336,7 @@ We welcome contributions from the community. Please read our CONTRIBUTING.md fil
 ## License
 
 This project is licensed under the MIT License. For more details, please see the LICENSE.md file.
+
+---
+
+This README provides a comprehensive overview of the Project Management Dashboard, detailing its features and the microservices architecture used to implement it. Each microservice is described with its responsibilities and key models, ensuring a clear understanding of the system's modular design.
